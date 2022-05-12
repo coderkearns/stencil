@@ -1,0 +1,19 @@
+---
+title: Page title?
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= file %>
+    </h1>
+</body>
+
+</html>
