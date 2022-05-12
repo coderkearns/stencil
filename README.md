@@ -105,4 +105,4 @@ I don't expect much real interaction with this project, but I will gladly accept
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://choosealicense.com/licenses/mit/)
