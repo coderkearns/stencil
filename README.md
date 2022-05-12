@@ -19,6 +19,8 @@ Patterns are **traced** in creation, asking questions and filling in data as the
 
 The simplest pattern has no questions, and only uses the file location and pattern name in the template:
 
+There are two global variables: `file` for the output file and `pattern` for the name of the pattern being copied.
+
 ##### simple_example.ejs
 ```ejs
 // File: <%= file %>
