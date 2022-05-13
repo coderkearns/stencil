@@ -4,7 +4,7 @@ function parsePattern(patternString) {
     // If there is front-matter, parse it using parseFrontMatter
     // Otherwise, default to an empty array
     const frontMatter = patternString.match(/^\s*---\s*\n([\s\S]*?)\s*\n---\s*\n/);
-    const questions = frontMatter ? parseFrontMatter(frontMatter[1]) : {};
+    const questions = frontMatter ? parseFrontMatter(frontMatter[1]) : [];
     // The rest is the pattern, parse it as ejs
     const template = ejs.compile(patternString.replace(/^\s*---\s*\n([\s\S]*?)\s*\n---\s*\n/, ''));
     return [questions, template];

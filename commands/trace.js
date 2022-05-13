@@ -1,7 +1,7 @@
 const { getPattern } = require('../util');
 const { parsePattern } = require('../parse');
+const traceUtils = require('../traceUtils');
 const fs = require('fs');
-const { waitForDebugger } = require('inspector');
 const prompt = require('prompt-sync')();
 
 module.exports = function (args) {
@@ -18,7 +18,7 @@ module.exports = function (args) {
 
     const questionData = askQuestions(questions)
 
-    const templateData = { ...questionData, file: args.location, name };
+    const templateData = { ...questionData, util: traceUtils, file: args.location, name };
 
     try {
         const rendered = template(templateData);

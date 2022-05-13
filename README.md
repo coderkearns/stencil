@@ -19,7 +19,7 @@ Patterns are **traced** in creation, asking questions and filling in data as the
 
 The simplest pattern has no questions, and only uses the file location and pattern name in the template:
 
-There are two global variables: `file` for the output file and `pattern` for the name of the pattern being copied.
+There are three global variables: `file` for the output file, `pattern` for the name of the pattern being copied, and a global [`util`](./traceUtils.js) object with a bunch of goodies.
 
 ##### simple_example.ejs
 ```ejs
@@ -48,7 +48,9 @@ The front matter sections use a specific syntax like so:
 ```
 
 Here's by a more complicated example:
-```html
+
+##### boolean_question_example.ejs
+```ejs
 ---
 shouldIncludeDoctype {"type": "boolean", "default": true}: Should the <!doctype> be included?
 ---

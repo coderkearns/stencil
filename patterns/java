@@ -1,8 +1,10 @@
 import java.util.*;
 
-public class <%= file.replace(".java", "") %> {
- public static void main(String[] args) {
-  // <%= file %>
-  System.out.println("Hello World!");
- }
+<% const className = util.string.toPascalCase(util.string.stripExtension(file)); -%>
+
+public class <%= className %> {
+    public static void main(String[] args) {
+        // <%= file %>
+        System.out.println("Hello World!");
+    }
 }
